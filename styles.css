@@ -1,0 +1,32 @@
+a {
+  display: inline-block;
+  padding: 0 5px;
+  list-style: circle;
+}
+
+.grid {
+  display: grid;
+  justify-items: stretch;
+  text-align: left;
+  padding: 50px;
+}
+
+.grid div:last-child {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    padding: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 80% auto;
+    padding: 50px;
+  }
+}
